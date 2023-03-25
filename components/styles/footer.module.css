@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #000;
+}
+
+.fDiv{
+    flex: 8;
+}
+
+.copyrightText{
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 200;
+    font-size: 1em;
+    padding-left: 1.5em;
+    cursor: default;
+}
+
+.sDiv{
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    margin: .7em;
+}
+
+.status {
+    color: rgb(86, 86, 86);
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    margin: auto 0.5em auto 0 !important;
+    cursor: pointer;
+    margin: auto;
+}
+
+.status:hover{
+    color: #fff;
+}
+
+.footerIcon{
+    color: rgb(86, 86, 86);
+    font-size: 1.8em;
+    margin: 0.2em;
+    cursor: pointer;
+}
+
+.footerIcon:hover{
+    color: #fff;
+}
+
+@media (max-width: 570px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 190px;
+
+    }
+    .fDiv{
+       flex-basis: 100%;
+    }
+    .copyrightText{
+        position: relative;
+        padding: 0; 
+        margin-top: .5em;
+        bottom: 0;
+    }
+    .sDiv{
+        display: grid;
+        justify-content: center;
+    }
+    .status {
+        margin: .7em auto .7em auto  !important;
+        cursor: pointer;
+        font-size: 1.3em;
+    }    
+    .link {
+        display: flex;
+        width: 100%; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footerIcon{
+        color: rgb(86, 86, 86);
+        font-size: 6.8em;
+        margin: 0.2em 0.1em;
+        cursor: pointer;
+        background-color: #444444;
+        color: #fff;
+        padding: .2em;
+        border: 1px transparent;
+        border-radius: 10px;
+        max-width: 1.1em;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .footerIcon{
+        padding: .2em;
+        max-width: .8em;
+    }
+}
+
+@media (max-width: 372px) {
+    .footerIcon{
+        padding: .2em;
+        max-width: .7em;
+        height: .8em;
+    }
+}
+
+@media (max-width: 340px) {
+    .footerIcon{
+        padding: 0 .1em;
+        max-width: .5em;
+        height: .6em;
+    }
+}

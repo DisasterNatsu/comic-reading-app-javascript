@@ -1,0 +1,195 @@
+/*Font Import from Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;400&display=swap');
+
+/*Main Body CSS*/
+
+.container{
+    max-width: 1700px;
+}
+
+.margin{
+    margin: 0.4em;
+}
+
+.topMargin{
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+/*Left Side CSS*/
+
+
+/*Common Styles*/
+
+.coverWrapper{
+    padding: 0.5em;
+    background-color: rgb(52, 48, 48);
+    border: .1px solid;
+    border-radius: .5em;
+    margin: .2em;
+}
+
+
+/*Cover Image and chapter Usage*/
+
+.leftCol{
+     justify-content: center;
+}
+
+
+.coverImage{
+    max-width: 22em;
+    object-fit: contain;
+}
+
+.marginLeft{
+    margin-left: 1em;
+}
+
+
+.basicDetails{
+    display: flex;
+}
+
+.title{
+    color: #fff;
+    padding-left: .1em;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
+    margin-top: .5em;
+}
+
+
+.chapters{
+    display: flex;
+}
+
+.readButton{
+    margin: .1em 0;
+    color: #fff;
+    padding: .5em;  
+}
+
+.readButton:hover{
+    background-color: rgb(14, 13, 13);
+    cursor: pointer;
+    border: 1px transparent;
+    border-radius: .3em;
+}
+
+/*Chapters CSS*/
+
+.chapterNumber{
+    margin: 0 0.5em;
+}
+
+.chapterBlob{
+    display: flex;
+    margin: 1.5em 0 1.5em 0;
+    cursor: pointer;
+}
+
+.hr{
+    border-bottom: 2px solid;
+    border-color: black;
+}
+
+/* Right Side Css */
+
+.rightCol{
+    justify-content: center;
+}
+
+.rightpadding{
+    padding-left: 0 !important;
+}
+
+.comicImage{
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.about{
+    font-size: 2em;
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: .7em 0;
+}
+
+.summary {
+    font-size: 1.2em;
+    margin: 0 0 .7em 0;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.description{
+    color: rgb(142, 143, 143);
+}
+
+.otherItems{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemKey{
+    color: rgb(149, 151, 151);
+    font-family: 'Changa', sans-serif;
+}
+
+.itemValue{
+    font-family: 'Changa', sans-serif;
+    font-weight: 400;
+}
+
+
+/*Responsive Design*/
+
+@media (max-width: 1590px){
+    .coverImage{
+        max-width: 20em;
+    }
+}
+
+@media (max-width: 1451px){
+    .coverImage{
+        max-width: 18em;
+    }
+}
+
+@media (max-width: 1300px){
+    .coverImage{
+        max-width: 15em;
+    }
+}
+
+@media (max-width: 1200px){
+    .rightpadding{
+        padding-left: 12px !important;
+    }
+}
+
+@media (max-width: 769px){
+    .marginLeft{
+        margin: auto;
+    }
+    .basicDetails{
+        justify-content: center;
+    }
+    .chapters{
+        justify-content: center;
+    }
+    .coverImage{
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 440px){
+    .coverImage{
+        max-width: 10em;
+    }
+    .readButton{
+        color: #fff;
+        font-size: .6em;
+    }
+}

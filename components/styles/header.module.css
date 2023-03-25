@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Merriweather+Sans:wght@300;400&family=Nunito:wght@900&display=swap');
+
+.container {
+    margin: 0;
+    padding-right: 0.5em;
+    background-color: rgb(0, 0, 0) !important;
+    height: 70px;
+}
+
+.menu {
+    flex: 3;
+}
+
+.search {
+    flex: 2;
+    margin: 3px 0 15px 15px;
+}
+
+.user {
+    flex: 1.5;
+    justify-content: flex-end;
+}
+
+.menu_item {
+    font-family: 'Lato', sans-serif;
+    margin: 6px;
+    padding: 10px !important;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff !important;
+    
+}
+
+.menu_item:hover{
+    background-color: rgb(31, 30, 30);
+}
+
+.active {
+    background-color: rgb(31, 30, 30);
+}
+
+.searchIcon{
+    position: relative;
+    margin-right: -1.3em;
+    padding-right: 1px;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.searchInput{
+    width: 99%;
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 6px;
+    border: 1px;
+    text-decoration: none;
+    padding-left: 2rem;
+    outline: none;
+    color: #fff;
+    background-color: rgb(39, 38, 38);
+}
+
+.searchInput::placeholder{
+    color: #fff;
+}
+
+
+.userLogIn{
+    font-family: 'Lato', sans-serif;
+    margin: 6px;
+    padding: 10px !important;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.userLogIn:hover{
+    background-color: rgb(31, 30, 30);
+}
+
+.userRegister{
+    font-family: 'Lato', sans-serif;
+    margin: 6px;
+    padding: 10px !important;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.userRegister:hover{
+    background-color: rgb(31, 30, 30);
+}
+
+
+.white {
+    color: white;
+}
+.hp10{
+    padding: 0 20px;
+}
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}

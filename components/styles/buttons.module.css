@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,600;1,600&display=swap');
+
+
+.btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 25px;
+}
+
+@media (max-width: 383px){
+    .btnWrapper {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 383px){
+    .btnWrapper {
+        display: none;
+    }
+}
+
+
+.dropDownWrapper{
+    display: none;
+}
+
+@media (max-width: 383px){
+    .btnWrapper {
+        display: none;
+    }
+    .dropDownWrapper {
+        display: block;
+    }
+}
+
+.menu {
+    margin: 0 3px;
+    background-color: transparent;
+    border: none;
+}
+
+.menu:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.dropDown{
+    background-color: transparent !important;
+    border: transparent;
+    margin: auto;
+}
+
+.dropDownMenu{
+    transform: translate3d(72px, 38px, 0px) !important;
+    text-align: center;
+}
+
+@media (max-width: 280px){
+    .dropDownMenu{
+        transform: translate3d(42px, 38px, 0px) !important;
+    }
+}
