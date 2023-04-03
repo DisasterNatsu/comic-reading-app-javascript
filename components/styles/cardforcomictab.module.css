@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .container {
-    margin-top: 25px;
+    margin-top: 250px;
+    margin: auto;
+    flex-wrap: nowrap;
 }
 
 .cardContainer {
     display: flex;
     flex-wrap: nowrap;
+
     height: 14.7rem;
     width: 20rem;
     background-color: rgb(52, 48, 48);
@@ -17,6 +20,8 @@
 .imageContainer{
     margin: 1px;
     width: 50%;
+    flex-wrap: nowrap;
+
     overflow: hidden;
     border: 1px transparent;
     border-radius: 15px !important;
@@ -25,6 +30,8 @@
 .cardContainer img {
     padding: 5px;
     height: 14.7rem;
+    flex-wrap: nowrap;
+
     object-fit: cover;  
 }
 
@@ -38,6 +45,8 @@
 .center{
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
+
     padding: 0 !important;
     
 }
@@ -46,6 +55,8 @@
 .chpaterWapper{
     margin: auto;
     justify-content: center;
+    flex-wrap: nowrap;
+
     align-items: center;
     color: rgb(179, 176, 176);
 }
