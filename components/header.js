@@ -3,6 +3,8 @@ import styles from "./styles/header.module.css";
 import { BiSearchAlt } from "react-icons/bi";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useRouter } from "next/router";
+import { FaDiscord} from "react-icons/fa";
+import footstyles from "./styles/footer.module.css";
 
 const Header = () => {
 	const router = useRouter();
@@ -16,7 +18,7 @@ const Header = () => {
 			variant="dark"
 		>
 			<Container fluid>
-				<Navbar.Brand href="/">Disater Scans</Navbar.Brand>
+				<Navbar.Brand href="/">Disaster Scans</Navbar.Brand>
 				<Navbar.Toggle aria-controls="navbarScroll" />
 				<Navbar.Collapse
 					id="navbarScroll"
@@ -53,11 +55,11 @@ const Header = () => {
 						</Nav.Link>
 						<Nav.Link
 							className={`${styles.menu_item} ${
-								router.pathname == "/privecy" ? styles.active : ""
+								router.pathname == "/privacy" ? styles.active : ""
 							} `}
-							href="/privecy"
+							href="/privacy"
 						>
-							Privecy Policy
+							Privacy Policy
 						</Nav.Link>
 					</Nav>
 
@@ -69,7 +71,12 @@ const Header = () => {
 							className={`me-2 ${styles.searchInput}`}
 						></input>
 					</div>
-
+					<FaDiscord
+						className={footstyles.footerIcon}
+						onClick={() => {
+							window.open("https://discord.gg/disasterScans", "_blank");
+						}}
+						/>
 					<Nav className={`me-auto my-2 my-lg-0 ${styles.user}`} navbarScroll>
 						<Nav.Link href="/log-in" className={`${styles.menu_item}`}>
 							Log In
