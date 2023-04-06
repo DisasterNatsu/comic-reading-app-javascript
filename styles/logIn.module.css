@@ -7,16 +7,23 @@
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     background-color: rgb(16, 16, 16);
+}
+
+.logo {
+    width: 20em;
+    margin-bottom: 2em;
+    
 }
 
 .wrapper{
     padding: 40px;
     border: 1px solid rgb(16, 16, 16);
     border-radius: 20px;
-    box-shadow: -5px -5px 15px rgb(194, 100, 100, 0.35), 5px 5px 15px rgb(0, 0, 0, 0.35), inset -5px -5px 15px rgb(194, 100, 100, 0.35), inset 5px 5px 15px rgb(0, 0, 0, 0.35);
+    box-shadow: -5px -5px 15px rgb(252, 235, 140, 0.35), 5px 5px 15px rgb(0, 0, 0, 0.35), inset -5px -5px 15px rgb(252, 235, 140, 0.35), inset 5px 5px 15px rgb(0, 0, 0, 0.35);
 }
 
 .form {
@@ -45,10 +52,10 @@
     background: rgb(16, 16, 16);
     color: #fff;
     font-weight: 300;
-    border: 1px solid rgb(194, 100, 100, 0.35);
+    border: 1px solid rgb(252, 235, 140, 0.35);
     border-radius: 25px;
     font-size: 1em;
-    box-shadow: -5px -5px 15px rgb(194, 100, 100, 0.35), 5px 5px 15px rgb(0, 0, 0, 0.35);
+    box-shadow: -5px -5px 15px rgb(252, 235, 140, 0.35), 5px 5px 15px rgb(0, 0, 0, 0.35);
     outline: none;
 }
 
@@ -61,22 +68,22 @@
     font-weight: 300;
     transition: 0.5s;
     letter-spacing: 0.06em;
-    color: rgb(194, 100, 100, 0.5);
+    color: rgb(252, 235, 140, 0.5);
 }
 
 .inputBox input:valid,
 .inputBox input:focus{
-    border: 1px solid rgb(223, 80, 80);
+    border: 1px solid rgb(255, 215, 0);
 }
 
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span{
-    color: rgb(223, 80, 80);
+    color: rgb(255, 215, 0);
     background: rgb(16, 16, 16);
     transform: translateX(25px) translateY(-7px);
     font-size: 0.6em;
     padding: 0 8px;
-    border: 1px solid rgb(223, 80, 80);
+    border: 1px solid rgb(255, 215, 0);
     border-radius: 10px;
     letter-spacing: 0.1em;
 }
@@ -87,21 +94,21 @@
     left: 15px;
     width: 25px;
     padding: 2px 8px 2px 0;
-    color: rgb(223, 80, 80);
-    border-right: 1px solid rgb(223, 80, 80);
+    color: rgb(255, 215, 0);
+    border-right: 1px solid rgb(255, 215, 0);
 }
 
 .inputBox input[type="submit"]{
-    background: rgb(223, 80, 80);
+    background: rgb(255, 215, 0);
     color: #000;
     padding: 10px 0;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: -5px -5px 15px rgb(194, 100, 100, 0.35), 5px 5px 15px rgb(0, 0, 0, 0.35), inset -5px -5px 15px rgb(194, 100, 100, 0.35), inset 5px 5px 15px rgb(0, 0, 0, 0.35);
+    box-shadow: -5px -5px 15px rgb(252, 235, 140, 0.35), 5px 5px 15px rgb(0, 0, 0, 0.35), inset -5px -5px 15px rgb(252, 235, 140, 0.35), inset 5px 5px 15px rgb(0, 0, 0, 0.35);
 }
 
 .wrapper p{
-    color: rgb(194, 100, 100, 0.5);
+    color: rgb(252, 235, 140, 0.5);
     font-size: .85em;
     font-weight: 300;
 }

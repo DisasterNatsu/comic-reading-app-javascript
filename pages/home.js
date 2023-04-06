@@ -6,16 +6,19 @@ import ComicCards from "../components/comicCards";
 import { Container } from "react-bootstrap";
 import Footer from "../components/footer";
 import CardWithChapter from "../components/cardWithChpt";
+import Layout from "../Layout/layout";
 
 const Home = () => {
 	return (
-		<div className={styles.container}>
-			<Container className={"maxWidth"}>
-				<ControlledCarousel />
-				<CardWithChapter />
-				<ComicCards />
-			</Container>
-		</div>
+		<Layout>
+			<div className={styles.container}>
+				<Container className={"maxWidth"}>
+					<ControlledCarousel />
+					<CardWithChapter />
+					<ComicCards />
+				</Container>
+			</div>
+		</Layout>
 	);
 };
 
