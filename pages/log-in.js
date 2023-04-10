@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "../styles/logIn.module.css";
-import { FaRegUser, FaRegEnvelope, FaLock } from "react-icons/fa";
+import { FaRegEnvelope } from "react-icons/fa";
 import { FiLock } from "react-icons/fi";
 
-const LogIn = () => {
+const Register = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.wrapper}>
+				<img src="/Asset/logo.png" alt="logo" className={styles.logo} />
 				<div className={`${styles.form} ${styles.signIn}`}>
-					<h2>Sign In</h2>
 					<div className={styles.inputBox}>
 						<input type="text" required="required" />
 						<FaRegEnvelope className={styles.icon} />
@@ -24,7 +24,9 @@ const LogIn = () => {
 					</div>
 					<p>
 						Don't have an account?{" "}
-						<a href="/log-in" className={styles.register}>
+
+						<a href="/register" className={styles.register}>
+
 							Register!
 						</a>
 					</p>
@@ -34,4 +36,4 @@ const LogIn = () => {
 	);
 };
 
-export default LogIn;
+export default Register;

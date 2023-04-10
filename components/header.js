@@ -18,7 +18,9 @@ const Header = () => {
 			variant="dark"
 		>
 			<Container fluid>
-				<Navbar.Brand href="/">Disaster Scans</Navbar.Brand>
+				<Navbar.Brand href="/">
+					<img src="/Asset/logo.png" alt="logo" className={styles.logo} />
+				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="navbarScroll" />
 				<Navbar.Collapse
 					id="navbarScroll"
