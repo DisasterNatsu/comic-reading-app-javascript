@@ -9,6 +9,7 @@ const LogIn = () => {
 			<div className={styles.wrapper}>
 				<div className={`${styles.form} ${styles.register}`}>
 					<img src="/Asset/logo.png" alt="logo" className={styles.logo} />
+
 					<div className={styles.inputBox}>
 						<input type="text" required="required" />
 						<FaRegUser className={styles.icon} />

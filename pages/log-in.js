@@ -24,7 +24,9 @@ const Register = () => {
 					</div>
 					<p>
 						Don't have an account?{" "}
+
 						<a href="/register" className={styles.register}>
+
 							Register!
 						</a>
 					</p>
