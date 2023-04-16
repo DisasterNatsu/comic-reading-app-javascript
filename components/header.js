@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles/header.module.css";
 import { BiSearchAlt } from "react-icons/bi";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useRouter } from "next/router";
-import { FaDiscord} from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 import footstyles from "./styles/footer.module.css";
+import UserDropdown from "./userDropdown";
 
 const Header = () => {
+	const [loggedIn, setLoggedIn] = useState({ isLoggedin: false, data: null });
+
 	const router = useRouter();
 
 	return (
@@ -41,7 +44,7 @@ const Header = () => {
 						</Nav.Link>
 						<Nav.Link
 							className={`${styles.menu_item} ${
-								router.pathname === "/comics" ? styles.active : ""
+								router.pathname.includes("/comics") ? styles.active : ""
 							}`}
 							href="/comics"
 						>
@@ -78,14 +81,20 @@ const Header = () => {
 						onClick={() => {
 							window.open("https://discord.gg/disasterScans", "_blank");
 						}}
-						/>
+					/>
 					<Nav className={`me-auto my-2 my-lg-0 ${styles.user}`} navbarScroll>
-						<Nav.Link href="/log-in" className={`${styles.menu_item}`}>
-							Log In
-						</Nav.Link>
-						<Nav.Link href="/register" className={`${styles.menu_item}`}>
-							Register
-						</Nav.Link>
+						{loggedIn.isLoggedin ? (
+							<UserDropdown />
+						) : (
+							<>
+								<Nav.Link href="/log-in" className={`${styles.menu_item}`}>
+									Log In
+								</Nav.Link>
+								<Nav.Link href="/register" className={`${styles.menu_item}`}>
+									Register
+								</Nav.Link>
+							</>
+						)}
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

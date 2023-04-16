@@ -1,117 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .container {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
 .cardContainer {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 14.7rem;
-    width: 20rem;
-    background-color: rgb(52, 48, 48);
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.imageContainer{
-    margin: 1px;
-    width: 50%;
-    overflow: hidden;
-    border: 1px transparent;
-    border-radius: 15px !important;
+	display: flex;
+	flex-wrap: nowrap;
+	height: 14.7rem;
+	width: 20rem;
+	background-color: rgb(52, 48, 48);
+	border-radius: 5px;
+	margin-top: 10px;
 }
 
 .cardContainer img {
-    padding: 5px;
-    height: 14.7rem;
-    object-fit: cover;  
+	padding: 5px;
+	height: 14.7rem;
+	object-fit: cover;
 }
 
-.wrapper{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+.wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
 }
 
-
-.center{
-    display: flex;
-    justify-content: center;
-    padding: 0 !important;
-    
+.center {
+	display: flex;
+	justify-content: center;
+	padding: 0 !important;
 }
 
-
-.chpaterWapper{
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    color: rgb(179, 176, 176);
+.chpaterWapper {
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	color: rgb(179, 176, 176);
 }
 
 .link:hover p {
-    color: #fff;  
+	color: #fff;
 }
 
-.link:hover{
-    border: 1px #fff solid;
+.link:hover {
+	border: 1px #fff solid;
 }
 
 .link {
-    border: 1px rgb(154, 151, 151) solid;
-    margin: 6px;
-    padding: 0 10px;
-    border-radius: 10px;
-    cursor: pointer;
+	border: 1px rgb(154, 151, 151) solid;
+	margin: 6px;
+	padding: 0 10px;
+	border-radius: 10px;
+	cursor: pointer;
 }
 
 .chpaterWapper p {
-    font-size: 0.9em;
-    margin: 0;
+	font-size: 0.9em;
+	margin: 0;
 }
 
 .time {
-    font-size: 0.7em;
-    margin-left: 1em;  
+	font-size: 0.7em;
+	margin-left: 1em;
 }
 
 .badge {
-    font-family: 'Bebas Neue', cursive;
-    border: .5px red solid ;
-    padding: 3px 19px;
-    border-radius: 10px;
+	font-family: "Bebas Neue", cursive;
+	border: 0.5px red solid;
+	padding: 3px 19px;
+	border-radius: 10px;
 }
 
 /*Responsive Design*/
 
-
-@media (max-width: 1400px){
-    .cardContainer {
-        height: 13.7rem;
-        width: 17rem; 
-    }
+@media (max-width: 1400px) {
+	.cardContainer {
+		height: 13.7rem;
+		width: 17rem;
+	}
 }
 
-@media (max-width: 1200px){
-    .cardContainer {
-        height: 14.7rem;
-        width: 20rem; 
-    }
+@media (max-width: 1200px) {
+	.cardContainer {
+		height: 14.7rem;
+		width: 20rem;
+	}
 }
 
-
-@media (max-width: 1000px){
-    .cardContainer {
-        height: 14.7rem;
-        width: 17rem; 
-    }
+@media (max-width: 1000px) {
+	.cardContainer {
+		height: 14.7rem;
+		width: 17rem;
+	}
 }
 
+@media (max-width: 769px) {
+	.cardContainer {
+		height: 14.7rem;
+		width: 25rem;
+	}
+}
 
-@media (max-width: 769px){
-    .cardContainer {
-        height: 14.7rem;
-        width: 25rem; 
-    }
+@media (max-width: 985px) {
+	.cardContainer img {
+		padding: 5px;
+		height: 14rem;
+		width: 9rem;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 769px) {
+	.cardContainer img {
+		padding: 5px;
+		height: 14.7rem;
+		width: 13rem;
+		object-fit: cover;
+	}
 }

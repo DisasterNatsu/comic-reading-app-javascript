@@ -100,7 +100,7 @@ const Buttons = () => {
 				<Dropdown.Menu variant="dark" className={styles.dropDownMenu}>
 					<Dropdown.Item href="#/action-1">
 						<Button
-							variant="danger"
+							variant="warning"
 							className={styles.menu}
 							onClick={handlePreviousClick}
 						>
@@ -109,7 +109,7 @@ const Buttons = () => {
 					</Dropdown.Item>
 					<Dropdown.Item>
 						<Button
-							variant="danger"
+							variant="warning"
 							className={styles.menu}
 							onClick={handleNextClick}
 						>

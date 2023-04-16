@@ -15,11 +15,7 @@ const CardWithChapter = () => {
 							href={"/comics/[comicName]"}
 							as={"/comics/martial-peak"}
 						>
-							<img
-								src="/Asset/Covers/mp.webp"
-								alt="Cover"
-								style={{ display: "cover" }}
-							/>
+							<img src="/Asset/Covers/mp.webp" alt="Cover" />
 						</Link>
 						<div className={styles.chpaterWapper}>
 							<Link
@@ -29,7 +25,7 @@ const CardWithChapter = () => {
 								as={"/comics/martial-peak/chapter-3011"}
 							>
 								<div className={styles.link}>
-									<p className="color">Chapter 3011</p>
+									<p className={`color ${styles.chapter}`}>Chapter 3011</p>
 									<span className={`${styles.time} color`}>11 hours ago</span>
 								</div>
 							</Link>

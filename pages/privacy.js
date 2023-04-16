@@ -1,10 +1,11 @@
 import React from "react";
+import Layout from "../Layout/layout";
 
 const privacy = () => {
 	return (
-		<div>
+		<Layout>
 			<h1>Privacy Policy</h1>
-		</div>
+		</Layout>
 	);
 };
 
