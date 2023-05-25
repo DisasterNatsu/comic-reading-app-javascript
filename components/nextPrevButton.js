@@ -2,124 +2,139 @@ import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { AiOutlineMenuFold, AiFillHome } from "react-icons/ai";
 import {
-	HiOutlineArrowNarrowLeft,
-	HiOutlineArrowNarrowRight,
+  HiOutlineArrowNarrowLeft,
+  HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
 import styles from "./styles/buttons.module.css";
 import { useRouter } from "next/router";
 import Dropdown from "react-bootstrap/Dropdown";
 
-const Buttons = () => {
-	const router = useRouter();
+const Buttons = ({ allChapters, currentChapter }) => {
+  const Router = useRouter();
 
-	// Previous Chpater Function
+  // Getting Current Chapter Index and if there are any other chapter for the comic
 
-	const handlePreviousClick = () => {
-		const completeLink = router.asPath.split("/"); // Gettting The PathName
-		const number =
-			parseInt(completeLink[completeLink.length - 1].split("-")[1]) - 1; // Paring it into a Integer and addng the previous Chapter Number
+  const innerIndex = allChapters.findIndex(
+    (x) => x.chapterID == currentChapter.chapterID
+  );
 
-		const newLink = `/comics/${
-			completeLink[completeLink.length - 2]
-		}/chapter-${number}`; // Creating The New Link
+  const router = useRouter();
 
-		router.push(newLink); // Pushing The New Link
-	};
+  // Previous Chpater Function
 
-	// Next Chapter Function
+  const handlePreviousClick = () => {
+    const prevChapterId = allChapters[innerIndex + 1].chapterID;
+    const prevChapterNumber = allChapters[innerIndex + 1].chapterNumber;
 
-	const handleNextClick = () => {
-		const completeLink = router.asPath.split("/"); // Gettting The PathName
-		const number =
-			parseInt(completeLink[completeLink.length - 1].split("-")[1]) + 1; // Paring it into a Integer and addng the next Chapter Number
+    const comicPartName = Router.query.comicName;
 
-		const newLink = `/comics/${
-			completeLink[completeLink.length - 2]
-		}/chapter-${number}`; // Creating The New Link
+    const link = `/comics/${comicPartName}/${prevChapterId}-chapter-${prevChapterNumber}`;
 
-		router.push(newLink); // Pushing The New Link
-	};
+    Router.push(link);
+  };
 
-	// Returning to Chapters Page
+  // Next Chapter Function
 
-	const chapterArchive = () => {
-		const completeLink = router.asPath.split("/");
+  const handleNextClick = () => {
+    const prevChapterId = allChapters[innerIndex - 1].chapterID;
+    const prevChapterNumber = allChapters[innerIndex - 1].chapterNumber;
 
-		const newLink = `/comics/${completeLink[completeLink.length - 2]}`;
-		router.push(newLink);
-	};
+    const comicPartName = Router.query.comicName;
 
-	// To home Page
+    const link = `/comics/${comicPartName}/${prevChapterId}-chapter-${prevChapterNumber}`;
 
-	const Home = () => {
-		router.push("/");
-	};
+    Router.push(link);
+  };
 
-	return (
-		<Container className="maxWidth">
-			<div className={styles.btnWrapper}>
-				<Button
-					variant="danger"
-					className={styles.menu}
-					onClick={handlePreviousClick}
-				>
-					<HiOutlineArrowNarrowLeft /> Previous
-				</Button>
-				<div>
-					<Button
-						variant="danger"
-						className={styles.menu}
-						onClick={chapterArchive}
-					>
-						<AiOutlineMenuFold />
-					</Button>
-					<Button variant="danger" className={styles.menu} onClick={Home}>
-						<AiFillHome />
-					</Button>
-				</div>
-				<Button
-					variant="danger"
-					className={styles.menu}
-					onClick={handleNextClick}
-				>
-					Next <HiOutlineArrowNarrowRight />
-				</Button>
-			</div>
-			<Dropdown
-				style={{ textAlign: "center" }}
-				className={styles.dropDownWrapper}
-			>
-				<Dropdown.Toggle
-					variant="danger"
-					id="dropdown-basic"
-					className={styles.dropDown}
-				>
-					<AiOutlineMenuFold />
-				</Dropdown.Toggle>
+  // Returning to Chapters Page
 
-				<Dropdown.Menu variant="dark" className={styles.dropDownMenu}>
-					<Dropdown.Item href="#/action-1">
-						<Button
-							variant="warning"
-							className={styles.menu}
-							onClick={handlePreviousClick}
-						>
-							<HiOutlineArrowNarrowLeft /> Previous
-						</Button>
-					</Dropdown.Item>
-					<Dropdown.Item>
-						<Button
-							variant="warning"
-							className={styles.menu}
-							onClick={handleNextClick}
-						>
-							Next <HiOutlineArrowNarrowRight />
-						</Button>
-					</Dropdown.Item>
-				</Dropdown.Menu>
-			</Dropdown>
-		</Container>
-	);
+  const chapterArchive = () => {
+    const completeLink = router.asPath.split("/");
+
+    const newLink = `/comics/${completeLink[completeLink.length - 2]}`;
+    router.push(newLink);
+  };
+
+  // To home Page
+
+  const Home = () => {
+    router.push("/");
+  };
+
+  return (
+    <Container className="maxWidth">
+      <div className={styles.btnWrapper}>
+        {innerIndex !== allChapters.length - 1 ? (
+          <Button
+            variant="danger"
+            className={styles.menu}
+            onClick={handlePreviousClick}
+          >
+            <HiOutlineArrowNarrowLeft /> Previous
+          </Button>
+        ) : (
+          <div></div>
+        )}
+
+        <div>
+          <Button
+            variant="danger"
+            className={styles.menu}
+            onClick={chapterArchive}
+          >
+            <AiOutlineMenuFold />
+          </Button>
+          <Button variant="danger" className={styles.menu} onClick={Home}>
+            <AiFillHome />
+          </Button>
+        </div>
+        {innerIndex !== 0 ? (
+          <Button
+            variant="danger"
+            className={styles.menu}
+            onClick={handleNextClick}
+          >
+            Next <HiOutlineArrowNarrowRight />
+          </Button>
+        ) : (
+          <div></div>
+        )}
+      </div>
+      <Dropdown
+        style={{ textAlign: "center" }}
+        className={styles.dropDownWrapper}
+      >
+        <Dropdown.Toggle
+          variant="danger"
+          id="dropdown-basic"
+          className={styles.dropDown}
+        >
+          <AiOutlineMenuFold />
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu variant="dark" className={styles.dropDownMenu}>
+          <Dropdown.Item href="#/action-1">
+            <Button
+              variant="warning"
+              className={styles.menu}
+              onClick={handlePreviousClick}
+            >
+              <HiOutlineArrowNarrowLeft /> Previous
+            </Button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Button
+              variant="warning"
+              className={styles.menu}
+              onClick={handleNextClick}
+            >
+              Next <HiOutlineArrowNarrowRight />
+            </Button>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </Container>
+  );
 };
 
 export default Buttons;

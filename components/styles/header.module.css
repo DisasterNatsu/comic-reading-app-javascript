@@ -1,114 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Merriweather+Sans:wght@300;400&family=Nunito:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Merriweather+Sans:wght@300;400&family=Nunito:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 .container {
-    margin: 0;
-    padding-right: 0.5em;
-    background-color: rgb(0, 0, 0) !important;
-    height: 70px;
+  margin: 0;
+  padding-right: 0.5em;
+  background-color: rgb(0, 0, 0) !important;
+  height: 70px;
 }
 
 .logo {
-    height: 2em;
-    width: 4em;
+  height: 2em;
+  width: 4em;
 }
 
 .menu {
-    flex: 3;
+  flex: 3;
 }
 
 .search {
-    flex: 2;
-    margin: 3px 0 15px 15px;
+  flex: 2;
+  margin: 3px 0 15px 15px;
 }
 
 .user {
-    flex: 1.5;
-    justify-content: flex-end;
+  flex: 1.5;
+  justify-content: flex-end;
 }
 
 .menu_item {
-    font-family: 'Lato', sans-serif;
-    margin: 6px;
-    padding: 10px !important;
-    border: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff !important;
-    
+  font-family: "Lato", sans-serif;
+  margin: 6px;
+  padding: 10px !important;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff !important;
 }
 
-.menu_item:hover{
-    background-color: rgb(31, 30, 30);
+.menu_item:hover {
+  background-color: rgb(31, 30, 30);
 }
 
 .active {
-    background-color: rgb(31, 30, 30);
+  background-color: rgb(31, 30, 30);
 }
 
-.searchIcon{
-    position: relative;
-    margin-right: -1.3em;
-    padding-right: 1px;
-    color: #fff;
-    font-size: 1.4rem;
+.searchIcon {
+  position: relative;
+  margin-right: -1.3em;
+  padding-right: 1px;
+  color: #fff;
+  font-size: 1.4rem;
 }
 
-.searchInput{
-    width: 99%;
-    margin-top: 10px;
-    padding: 7px;
-    border-radius: 6px;
-    border: 1px;
-    text-decoration: none;
-    padding-left: 2rem;
-    outline: none;
-    color: #fff;
-    background-color: rgb(39, 38, 38);
+.searchInput {
+  width: 99%;
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 6px;
+  border: 1px;
+  text-decoration: none;
+  padding-left: 2rem;
+  outline: none;
+  color: #fff;
+  background-color: rgb(39, 38, 38);
 }
 
-.searchInput::placeholder{
-    color: #fff;
+.userLogIn {
+  font-family: "Lato", sans-serif;
+  margin: 6px;
+  padding: 10px !important;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-
-.userLogIn{
-    font-family: 'Lato', sans-serif;
-    margin: 6px;
-    padding: 10px !important;
-    border: 1px;
-    border-radius: 5px;
-    cursor: pointer;
+.userLogIn:hover {
+  background-color: rgb(31, 30, 30);
 }
 
-.userLogIn:hover{
-    background-color: rgb(31, 30, 30);
+.userRegister {
+  font-family: "Lato", sans-serif;
+  margin: 6px;
+  padding: 10px !important;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.userRegister{
-    font-family: 'Lato', sans-serif;
-    margin: 6px;
-    padding: 10px !important;
-    border: 1px;
-    border-radius: 5px;
-    cursor: pointer;
+.userRegister:hover {
+  background-color: rgb(31, 30, 30);
 }
-
-.userRegister:hover{
-    background-color: rgb(31, 30, 30);
-}
-
 
 .white {
-    color: white;
+  color: white;
 }
-.hp10{
-    padding: 0 20px;
+.hp10 {
+  padding: 0 20px;
 }
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .center {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar {
+  background-color: black !important;
+}
+
+.collapseLogo {
+  height: 5em;
+  align-self: center;
+  margin: auto;
+}
+
+.collapseLink {
+  margin: 20px auto;
+  font-size: 1.3em;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.seatContainer {
+  position: absolute;
+  background-color: rgb(38, 38, 38);
+  width: 100%;
+  margin-top: 0.4em;
+  border: 1px solid #fff;
+  border-radius: 0.3em;
+}
+
+.results {
+  background-color: rgb(38, 38, 38);
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+.results a {
+  display: block;
+}
+
+.dummyText {
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.singleValueContainer {
+  width: 100%;
+  max-height: 40rem;
+  margin: 0.4em 0;
+}
+
+.title {
+  color: #fff;
+  margin-left: 0.4em;
+  font-size: 1.1em;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
 }

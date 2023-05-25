@@ -1,6 +1,13 @@
-.comicName{
-    margin: 2em 0;
-    color: rgb(122, 122, 122);
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: 400;
+.comicName {
+  margin: 2em 0 0.5em 0;
+  color: rgb(154, 153, 153);
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 400;
+}
+
+.chapter {
+  font-size: 1.5em;
+  color: #fff;
+  letter-spacing: 6px;
+  margin-bottom: 2em;
 }

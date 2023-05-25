@@ -1,63 +1,112 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: rgb(0, 0, 0) !important;
+  min-height: 100vh;
+}
 
-body{
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: rgb(0, 0, 0) !important;
+nav {
+  border-bottom: 1px solid #3a3a3a;
 }
 
 .white {
-    color: white;
+  color: white;
 }
-.hp10{
-    padding: 0 20px;
+.hp10 {
+  padding: 0 20px;
 }
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .center {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .activeMenu {
-    background-color: rgb(31, 30, 30);
+  background-color: rgb(31, 30, 30);
 }
 
-.heading{
-    font-size: 1.5em;
+.heading {
+  font-size: 1.5em;
 }
 
 .decorationNone {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
-.hot{
-    display: flex;
-    color: red;
-    font-size: 20px;
-    justify-content: center;
+.TRENDING {
+  display: flex;
+  color: red;
+  font-size: 20px;
+  justify-content: center;
 }
 
 .maxWidth {
-    max-width: 1400px;
-    margin-bottom: 30px;
+  max-width: 1400px;
+  margin-bottom: 30px;
 }
 
-.paddingZero{
-    padding: 0 !important;
+.paddingZero {
+  padding: 0 !important;
 }
 
-.topBottomMargin{
-    margin-bottom: 2em;
-    padding: 0 !important;
+.topBottomMargin {
+  margin-bottom: 2em;
+  padding: 0 !important;
 }
 
 .color {
-   color: rgb(179, 176, 176);
+  color: rgb(179, 176, 176);
 }
 
-.color:hover{
-    color: #fff;
+.color:hover {
+  color: #fff;
+}
+
+.nextui-navbar-container {
+  background-color: black !important;
+}
+
+.nextui-navbar-content li a:hover {
+  color: #fff !important;
+
+  border-radius: 0.6em;
+}
+
+.nextui-navbar-content li {
+  margin: 0 0.3em !important;
+}
+
+.nextui-navbar-collapse-wrapper {
+  background-color: rgb(0, 0, 0, 0.5) !important;
+  height: 100vh;
+}
+
+.nextui-navbar-toggle div span {
+  background-color: #fff !important;
+}
+
+/* Fading Css */
+
+.fadeIN {
+  transition: opacity 1s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Bottom */
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.col-xxl-12 nav {
+  border-bottom: 0 !important;
 }

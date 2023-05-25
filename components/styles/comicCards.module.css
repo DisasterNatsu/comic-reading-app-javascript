@@ -1,58 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 
 .imageWrap {
-    background-color: rgb(52, 48, 48);
-    margin: 8px;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  background-color: rgb(52, 48, 48);
+  margin: 8px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.3em;
 }
 
 .imageWrap span {
-    color: #fff;
-    margin: auto !important;
+  color: #fff;
+  margin: 1.9em auto !important;
 }
 
-.imageContainer{
-    display: flex;
-    max-height: 400px;
-    max-width: 340px;
-    object-fit: cover;
-    overflow: hidden;
-   
+.imageContainer {
+  display: flex;
+  max-height: 400px;
+  max-width: 340px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 @media (max-width: 1400px) {
-    .imageContainer{
-        max-height: 300px;
-        max-width: 240px;    
-    }
+  .imageContainer {
+    max-height: 300px;
+    max-width: 240px;
+  }
 }
-
 
 @media (max-width: 767px) {
-    .imageContainer{
-        max-height: 400px;
-        max-width: 330px;  
-    }
-    .cardGrid{
-        margin: 0 .3em;
-    }
+  .imageContainer {
+    max-height: 400px;
+    max-width: 330px;
+  }
+  .cardGrid {
+    margin: 0 0.3em;
+  }
 }
-
 
 .cardGrid {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
-.image{
-    height: 340px;
-    object-fit: contain;
-    margin-bottom: 10px;    
+.image {
+  height: 340px;
+  object-fit: cover;
 }
 
-.title{
-    font-family: 'Oswald', sans-serif;
+.title {
+  font-family: "Oswald", sans-serif;
+  margin: 0.5em auto 0 auto !important;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 80%;
+  font-size: 1em;
 }
