@@ -47,7 +47,8 @@ const Chapter = ({ chapter, chapterAll }) => {
       />
       <Head>
         <title>
-          {chapter.ComicTitle} - {chapter.ChapterNumber}
+          {chapter.ComicTitle} - Chapter {chapter.ChapterNumber}{" "}
+          {chapter.ChapterName && chapter.ChapterName}
         </title>
       </Head>
       <Layout>

@@ -22,7 +22,6 @@ const CardWithChapter = () => {
     // Dividing The array into two individual parts
 
     response
-      .reverse()
       .reduce((accumulator, currentValue, currentIndex, array) => {
         if (currentIndex % 2 === 0) {
           accumulator.push(array.slice(currentIndex, currentIndex + 2));

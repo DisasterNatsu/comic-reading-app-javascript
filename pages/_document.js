@@ -25,7 +25,15 @@ class MyDocument extends Document {
           <link rel="icon" href="/Asset/logo.png" />
           <script
             async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2651302773019896"
+            crossorigin="anonymous"
+          />
+          <script
+            async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+            onError={(e) => {
+              console.log("Script failed to load", e);
+            }}
           />
           <script
             dangerouslySetInnerHTML={{

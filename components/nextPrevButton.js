@@ -73,7 +73,18 @@ const Buttons = ({ allChapters, currentChapter }) => {
             <HiOutlineArrowNarrowLeft /> Previous
           </Button>
         ) : (
-          <div></div>
+          <Button
+            variant="danger"
+            disabled
+            style={{
+              backgroundColor: "#000",
+              border: "none",
+              margin: "0 3px",
+              color: "#000",
+            }}
+          >
+            <HiOutlineArrowNarrowLeft /> Previous
+          </Button>
         )}
 
         <div>
@@ -97,7 +108,18 @@ const Buttons = ({ allChapters, currentChapter }) => {
             Next <HiOutlineArrowNarrowRight />
           </Button>
         ) : (
-          <div></div>
+          <Button
+            variant="danger"
+            disabled
+            style={{
+              backgroundColor: "#000",
+              border: "none",
+              margin: "0 3px",
+              color: "#000",
+            }}
+          >
+            Next <HiOutlineArrowNarrowRight />
+          </Button>
         )}
       </div>
       <Dropdown
