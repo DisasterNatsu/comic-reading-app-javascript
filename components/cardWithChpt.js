@@ -51,8 +51,8 @@ const CardWithChapter = () => {
               const comicID = chapter[0].id; // Defining Comic ID
               const ChapterID = chapter[0].chapterID; // Defining Chapter ID
               const ChapterNumber = chapter[0].ChapterNumber; // Defining Chapter Number
-              const ChapterID2 = chapter[1].chapterID; // Defining Chapter ID 2
-              const ChapterNumber2 = chapter[1].ChapterNumber; // Defining Chapter Number 2
+              const ChapterID2 = chapter[1]?.chapterID; // Defining Chapter ID 2
+              const ChapterNumber2 = chapter[1]?.ChapterNumber; // Defining Chapter Number 2
 
               // Lower Casing The comic Title
 
@@ -105,7 +105,8 @@ const CardWithChapter = () => {
                         </div>
                       </Link>
 
-                      <Link
+                      {chapter[1] ?
+                        <Link
                         className={`decorationNone`}
                         style={{ display: "flex" }}
                         href={"/comics/[comicName]/[chapter]]"}
@@ -119,7 +120,7 @@ const CardWithChapter = () => {
                             11 hours ago
                           </span>
                         </div>
-                      </Link>
+                      </Link> : null}
                       {chapter[0].Badges && (
                         <div className={chapter[0].Badges}>
                           <span className={styles.badge}>Trending</span>
